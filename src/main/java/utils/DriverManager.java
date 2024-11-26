@@ -18,18 +18,20 @@ public class DriverManager {
 
     private static WebDriver createDriver(String browser) {
         switch (browser.toLowerCase()) {
-            case "chrome":
+            case "chrome" -> {
                 WebDriverManager.chromedriver().setup();
                 return new ChromeDriver(new ChromeOptions());
-            case "firefox":
+            }
+            case "firefox" -> {
                 WebDriverManager.firefoxdriver().setup();
                 return new FirefoxDriver(new FirefoxOptions());
-            case "edge":
+            }
+            case "edge" -> {
                 WebDriverManager.edgedriver().setup();
                 return new EdgeDriver(new EdgeOptions());
-            default:
-                throw new IllegalArgumentException("Unsupported browser " + browser
-                        + " Please use 'chrome', 'firefox', or 'edge'.");
+            }
+            default -> throw new IllegalArgumentException("Unsupported browser " + browser
+                    + " Please use 'chrome', 'firefox', or 'edge'.");
         }
     }
 

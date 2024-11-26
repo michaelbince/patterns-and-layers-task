@@ -3,8 +3,8 @@ package steps;
 import pages.InventoryPage;
 
 public class AddProductToCartStep extends TestStep {
-    private InventoryPage inventoryPage;
-    private String productToBeAdded;
+    private final InventoryPage inventoryPage;
+    private final String productToBeAdded;
 
     public AddProductToCartStep(InventoryPage inventoryPage, String productToBeAdded){
         this.inventoryPage = inventoryPage;

@@ -4,8 +4,8 @@ import models.User;
 import pages.LoginPage;
 
 public class LoginStep extends TestStep {
-    private LoginPage loginPage;
-    private User user;
+    private final LoginPage loginPage;
+    private final User user;
 
     public LoginStep(LoginPage loginPage, User user){
         this.loginPage = loginPage;

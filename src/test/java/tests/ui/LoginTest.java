@@ -5,7 +5,6 @@ import models.UserBuilder;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.CartPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 import steps.LoginStep;
@@ -39,6 +38,6 @@ public class LoginTest  extends BaseTest {
 
         loginStep.execute();
 
-        Assert.assertEquals(inventoryPage.getSectionTitle(), PRODUCTS_SECTION_TITLE);
+        Assert.assertEquals(inventoryPage.getSectionTitle(), PRODUCTS_SECTION_TITLE, "The user is not in the section: "+ PRODUCTS_SECTION_TITLE);
     }
 }

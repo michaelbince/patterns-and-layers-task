@@ -37,6 +37,6 @@ public class ShoppingCartTest extends BaseTest {
         loginStep.setNextStep(addProductToCartStep).execute();
 
 
-        Assert.assertTrue(cartPage.isItemOnTheCart(product));
+        Assert.assertTrue(cartPage.isItemOnTheCart(product), "The product: "+ product +" is not on the cart");
     }
 }
